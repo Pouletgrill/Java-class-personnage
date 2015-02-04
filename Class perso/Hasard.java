@@ -15,19 +15,19 @@ public class Hasard
             System.out.println("Veuillez entrer un nombre de lancer valide");
             return;            
          }         
-         else if (Integer.parseInt(args[0])>0)
+         else if (Integer.parseInt(args[0])>=0 && Integer.parseInt(args[0])<=1000000)
          {
             NbLancer = Integer.parseInt(args[0]);
          }
          else
          {
-            System.out.println("Parametre hors intervale");
+            System.out.println("Parametre hors intervale\n0 - 1,000,000");
             return;
          }
       }
       catch( NumberFormatException e )
       {
-         System.out.println("Parametre invalide\n" + e);
+         System.out.println("Parametre invalide\n");
          return;
       }
       int tab[] = new int [11];
