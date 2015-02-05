@@ -52,3 +52,57 @@ public class Test
             nbPersonnages + " personnage(s)" );
    }
 }
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+public abstract class Personnage
+{
+   // variables membres
+	String nom;
+	char sexe;
+	
+	//constructeur
+	public Personnage()
+	{
+		nom = "Default";
+		sexe = 'M';
+	}
+   // méthodes
+   //float getPosition( float date )
+   //{
+    //  ...
+   //}
+}
+
+public class Sorcier extends Personnage
+{
+	   // variables membres
+	String type;
+	
+	//constructeur
+	public Sorcier()
+	{
+
+	}
+   // méthodes
+   //float getPosition( float date )
+   //{
+    //  ...
+   //}
+}
+
+public class Voleur extends Personnage
+{
+	   // variables membres
+	int nbLarcins
+	
+	//constructeur
+	public Voleur()
+	{
+		nom = "Default";
+		sexe = 'M';
+	}
+   // méthodes
+   //float getPosition( float date )
+   //{
+    //  ...
+   //}
+}
