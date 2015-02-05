@@ -1,4 +1,4 @@
-class Personnage
+public abstract class Personnage
 {
    // variables membres
 	String nom;
@@ -7,11 +7,8 @@ class Personnage
 	//constructeur
 	public Personnage()
 	{
-		
+		nom = "Default";
+		sexe = 'M';
 	}
-   // méthodes
-   float getPosition( float date )
-   {
-      ...
-   }
+   // m�thodes
 }

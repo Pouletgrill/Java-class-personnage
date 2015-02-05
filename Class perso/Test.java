@@ -7,19 +7,19 @@ public class Test
       int nbPersonnages = 0; // nombre courant de personnages
 
       //
-      // création du tableau de personnages
+      // crï¿½ation du tableau de personnages
       //
       Personnage pers[] = new Personnage[ MAX_PERSONNAGES ];
 
       //
-      // décompte des personnages au début de l'histoire
+      // dï¿½compte des personnages au dï¿½but de l'histoire
       //
       nbPersonnages = Sorcier.getNbSorciers() + Voleur.getNbVoleurs();
       System.out.println( "Au debut de l'histoire il y a " +
             nbPersonnages + " personnage(s)\n" );
 
       //
-      // création des personnages
+      // crï¿½ation des personnages
       //
       pers[ 0 ] = new Sorcier( "Gandalf", 'M' );
       pers[ 1 ] = new Sorcier( "Zoumtor", 'M', "air" );
@@ -39,70 +39,16 @@ public class Test
       ( ( Voleur )pers[ 5 ] ).incNbLarcins();
 
       //
-      // présentation des personnages
+      // prï¿½sentation des personnages
       //
       nbPersonnages = Sorcier.getNbSorciers() + Voleur.getNbVoleurs();
       for( int i = 0; i < nbPersonnages; i++ )
          System.out.println( pers[ i ] );
 
       //
-      // décompte des personnages à la fin de l'histoire
+      // dï¿½compte des personnages ï¿½ la fin de l'histoire
       //
       System.out.println( "\nA la fin de l'histoire il y a " +
             nbPersonnages + " personnage(s)" );
    }
-}
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-public abstract class Personnage
-{
-   // variables membres
-	String nom;
-	char sexe;
-	
-	//constructeur
-	public Personnage()
-	{
-		nom = "Default";
-		sexe = 'M';
-	}
-   // méthodes
-   //float getPosition( float date )
-   //{
-    //  ...
-   //}
-}
-
-public class Sorcier extends Personnage
-{
-	   // variables membres
-	String type;
-	
-	//constructeur
-	public Sorcier()
-	{
-
-	}
-   // méthodes
-   //float getPosition( float date )
-   //{
-    //  ...
-   //}
-}
-
-public class Voleur extends Personnage
-{
-	   // variables membres
-	int nbLarcins
-	
-	//constructeur
-	public Voleur()
-	{
-		nom = "Default";
-		sexe = 'M';
-	}
-   // méthodes
-   //float getPosition( float date )
-   //{
-    //  ...
-   //}
 }
