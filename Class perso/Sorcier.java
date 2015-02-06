@@ -1,22 +1,19 @@
 public class Sorcier extends Personnage
 {
 	   // variables membres
-	static String ctype;
-	static int NbSorcier=0;
+	private String ctype = "inconnue";
+	private static int NbSorcier=0;
 	
 	//constructeur
 	public Sorcier(String Nom, char Sexe)
 	{
-		Personnage.setNom(Nom);
-		Personnage.setSexe(Sexe);
-		ctype = "InconnueXXX";//XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+		super(Nom,Sexe);
 		NbSorcier += 1;
 	}
 	
 	public Sorcier(String Nom, char Sexe, String Type)
 	{	
-		Personnage.setNom(Nom);
-		Personnage.setSexe(Sexe);			
+		super(Nom,Sexe);		
 		this.setType(Type);
 		NbSorcier += 1;
 	}
@@ -28,13 +25,29 @@ public class Sorcier extends Personnage
 	
 	public void setType(String Type)
 	{
-		if (Type == "eau" || Type == "feu" || Type == "terre" || Type == "air")
+		if (Type.toLowerCase().equals("eau") || Type.toLowerCase().equals("feu") || Type.toLowerCase().equals("terre") || Type.toLowerCase().equals("air"))
 		{
 			ctype = Type;
 		}
+	}
+	
+	public String getType()
+	{
+		return ctype;
+	}
+	
+	public String toString()
+	{
+		String Phrase = "Mon nom est " + getNom() + " et je suis ";
+		if (Character.toUpperCase(getSexe()) == 'M')
+		{
+			Phrase += "un sorcier";
+		}
 		else
 		{
-			ctype = "XXX";//XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+			Phrase += "une sorciere";
 		}
+		Phrase += " de type " + ctype;
+		return Phrase;
 	}
 }

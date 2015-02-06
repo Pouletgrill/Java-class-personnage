@@ -1,8 +1,8 @@
 public abstract class Personnage
 {
    // variables membres
-	static String cnom;
-	static char csexe;
+	private String cnom;
+	private char csexe;
 	
 	//constructeur
 	public Personnage()
@@ -10,12 +10,19 @@ public abstract class Personnage
 		cnom = "Default";
 		csexe = 'M';
 	}
-   // méthodes
-	public static void setNom(String nom)
+	public Personnage(String Nom, char Sexe)
 	{
+		cnom = Nom;
+		csexe = Sexe;
+	}
+   // méthodes
+	public void setNom(String nom)
+	{
+		if (nom.trim().length() != 0)
 		cnom = nom;
 	}
-	public static void setSexe(char sexe)
+		
+	public void setSexe(char sexe)
 	{
 		if (sexe == 'M' || sexe == 'F')
 		{			
@@ -25,5 +32,15 @@ public abstract class Personnage
 		{
 			csexe = 'M';
 		}
+	}	
+	
+	public String getNom()
+	{
+		return cnom;
+	}
+	
+	public char getSexe()
+	{
+		return csexe;
 	}
 }

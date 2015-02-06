@@ -1,22 +1,24 @@
 final class Voleur extends Personnage
 {
 	   // variables membres
-	static int cnbLarcins;
-	static int NbVoleur=0;
+	private int cnbLarcins=0;
+	private static int NbVoleur=0;
 	
 	//constructeur
 	public Voleur(String Nom, char Sexe)
 	{
-		Personnage.setNom(Nom);
-		Personnage.setSexe(Sexe);
-		cnbLarcins = 9999;//test XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+		//Personnage.setNom(Nom);
+		//Personnage.setSexe(Sexe);
+		super(Nom,Sexe);
+		cnbLarcins = 0;
 		NbVoleur += 1;
 	}
 	
 	public Voleur(String Nom, char Sexe, int nbLarcins)
 	{
-		Personnage.setNom(Nom);
-		Personnage.setSexe(Sexe);
+		//Personnage.setNom(Nom);
+		//Personnage.setSexe(Sexe);
+		super(Nom,Sexe);
 		cnbLarcins = nbLarcins;
 		NbVoleur += 1;
 	}
@@ -29,6 +31,22 @@ final class Voleur extends Personnage
 	
 	public int incNbLarcins()
 	{
+		cnbLarcins +=1;
 		return cnbLarcins;
+	}
+	
+	public String toString()
+	{
+		String Phrase = "Mon nom est " + getNom() + " et je suis ";
+		if (Character.toUpperCase(getSexe()) == 'M')
+		{
+			Phrase += "un voleur";
+		}
+		else
+		{
+			Phrase += "une voleuse";
+		}
+		Phrase += " ayant commis " + cnbLarcins + " larcin(s)";
+		return Phrase;
 	}
 }
