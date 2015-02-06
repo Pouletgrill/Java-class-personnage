@@ -2,6 +2,7 @@ final class Voleur extends Personnage
 {
 	   // variables membres
 	static int cnbLarcins;
+	static int NbVoleur=0;
 	
 	//constructeur
 	public Voleur(String Nom, char Sexe)
@@ -9,6 +10,7 @@ final class Voleur extends Personnage
 		Personnage.setNom(Nom);
 		Personnage.setSexe(Sexe);
 		cnbLarcins = 9999;//test XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+		NbVoleur += 1;
 	}
 	
 	public Voleur(String Nom, char Sexe, int nbLarcins)
@@ -16,12 +18,13 @@ final class Voleur extends Personnage
 		Personnage.setNom(Nom);
 		Personnage.setSexe(Sexe);
 		cnbLarcins = nbLarcins;
+		NbVoleur += 1;
 	}
 
    // m�thodes
 	public static int getNbVoleurs()
 	{
-		return 0;
+		return NbVoleur;
 	}
 	
 	public int incNbLarcins()

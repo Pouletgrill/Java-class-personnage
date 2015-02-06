@@ -1,8 +1,8 @@
 public abstract class Personnage
 {
    // variables membres
-	private String cnom;
-	private char csexe;
+	static String cnom;
+	static char csexe;
 	
 	//constructeur
 	public Personnage()
@@ -26,8 +26,4 @@ public abstract class Personnage
 			csexe = 'M';
 		}
 	}
-	 public String toString() 
-	 {
-	  return "Key: , Value: ";
-    }
 }

@@ -2,6 +2,7 @@ public class Sorcier extends Personnage
 {
 	   // variables membres
 	static String ctype;
+	static int NbSorcier=0;
 	
 	//constructeur
 	public Sorcier(String Nom, char Sexe)
@@ -9,6 +10,7 @@ public class Sorcier extends Personnage
 		Personnage.setNom(Nom);
 		Personnage.setSexe(Sexe);
 		ctype = "InconnueXXX";//XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+		NbSorcier += 1;
 	}
 	
 	public Sorcier(String Nom, char Sexe, String Type)
@@ -16,11 +18,12 @@ public class Sorcier extends Personnage
 		Personnage.setNom(Nom);
 		Personnage.setSexe(Sexe);			
 		this.setType(Type);
+		NbSorcier += 1;
 	}
    // m�thodes
 	public static int getNbSorciers()
 	{
-		return 0;
+		return NbSorcier;
 	}
 	
 	public void setType(String Type)
