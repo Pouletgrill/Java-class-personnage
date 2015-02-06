@@ -7,19 +7,19 @@ public class Test
       int nbPersonnages = 0; // nombre courant de personnages
 
       //
-      // cr�ation du tableau de personnages
+      // création du tableau de personnages
       //
       Personnage pers[] = new Personnage[ MAX_PERSONNAGES ];
 
       //
-      // d�compte des personnages au d�but de l'histoire
+      // décompte des personnages au début de l'histoire
       //
       nbPersonnages = Sorcier.getNbSorciers() + Voleur.getNbVoleurs();
       System.out.println( "Au debut de l'histoire il y a " +
             nbPersonnages + " personnage(s)\n" );
 
       //
-      // cr�ation des personnages
+      // création des personnages
       //
       pers[ 0 ] = new Sorcier( "Gandalf", 'M' );
       pers[ 1 ] = new Sorcier( "Zoumtor", 'M', "air" );
@@ -39,14 +39,14 @@ public class Test
       ( ( Voleur )pers[ 5 ] ).incNbLarcins();
 
       //
-      // pr�sentation des personnages
+      // présentation des personnages
       //
       nbPersonnages = Sorcier.getNbSorciers() + Voleur.getNbVoleurs();
       for( int i = 0; i < nbPersonnages; i++ )
          System.out.println( pers[ i ] );
 
       //
-      // d�compte des personnages � la fin de l'histoire
+      // décompte des personnages à la fin de l'histoire
       //
       System.out.println( "\nA la fin de l'histoire il y a " +
             nbPersonnages + " personnage(s)" );

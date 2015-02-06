@@ -1,35 +1,37 @@
 public class Sorcier extends Personnage
 {
 	   // variables membres
-	String type;
+	static String ctype;
 	
 	//constructeur
-	public Sorcier(String sNom, char sSexe)
+	public Sorcier(String Nom, char Sexe)
 	{
-		Personnage.Nom = sNom;
-		Personnage.Sexe = sSexe;
-		type = "Inconnue";
+		Personnage.setNom(Nom);
+		Personnage.setSexe(Sexe);
+		ctype = "InconnueXXX";//XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 	}
 	
-	public Sorcier(String sNom, char Sexe, String sType)
+	public Sorcier(String Nom, char Sexe, String Type)
+	{	
+		Personnage.setNom(Nom);
+		Personnage.setSexe(Sexe);			
+		this.setType(Type);
+	}
+   // m�thodes
+	public static int getNbSorciers()
 	{
-		if (sSexe == 'M' || sSexe == 'F')
-		{			
-			Personnage.SetSexe(Sexe);			
+		return 0;
+	}
+	
+	public void setType(String Type)
+	{
+		if (Type == "eau" || Type == "feu" || Type == "terre" || Type == "air")
+		{
+			ctype = Type;
 		}
 		else
 		{
-			Personnage.SetSexe('M');
-		}	
-	Personnage.Nom = sNom;
-		if (sType == "eau" || sType == "feu" || sType == "terre" || sType == "air")
-		{
-			type = sType;
-		}	
-	}
-   // m�thodes
-	int getNbSorciers()
-	{
-		return 0;
+			ctype = "XXX";//XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+		}
 	}
 }
